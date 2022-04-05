@@ -1,17 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <TextEditor value="test text editor" dir="rtl" align="right" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TextEditor from "./components/TextEditor.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    TextEditor,
+  },
+};
 </script>
 
 <style>
