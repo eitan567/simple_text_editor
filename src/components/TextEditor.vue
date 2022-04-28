@@ -1,29 +1,11 @@
 <template>
-  <div
+  <p
     contenteditable
     @input="handleInput"
     :dir="dir"
     :style="`text-align:` + align"
     class="text-editor"
-  />
-  <div
-    ref="editor"
-    style="
-      position: absolute;
-      top: 100px;
-      left: 500px;
-      width: 30px;
-      height: 30px;
-      background-color: red;
-    "
-  ></div>
-  <button
-    id="testbtn"
-    style="width: 100px; height: 30px;"
-    @click="$refs.editor.style.top = '50px'"
-  >
-    Test
-  </button>
+  ></p>
 </template>
 <script>
 const exec = (command, value) => document.execCommand(command, false, value);
@@ -32,7 +14,7 @@ const exec = (command, value) => document.execCommand(command, false, value);
 
 export default {
   props: {
-    value: { type: String, default: "" },
+    value: { type: String, default: "<p></p>" },
     dir: String,
     align: String,
   },
@@ -117,5 +99,15 @@ export default {
   margin: 0;
   padding: 0;
   line-height: 1em;
+}
+
+.text-editor {
+  outline: none;
+  border: 1px solid rgb(110, 110, 110);
+  height: 50vh;
+  width: 80vh;
+  max-width: 80vh;
+  margin: 0 auto;
+  overflow: auto;
 }
 </style>
