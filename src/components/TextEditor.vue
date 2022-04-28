@@ -1,4 +1,62 @@
 <template>
+  <div class="btn-toolbar">
+    <div class="btn-group">
+      <button type="button" class="btn" data-original-title="Bold - Ctrl+B">
+        <i class="fa-solid fa-bold"></i>
+        <font-awesome-icon icon="fa-solid fa-user-secret" />
+      </button>
+      <button
+        type="button"
+        class="btn btn-light"
+        data-original-title="Italic - Ctrl+I"
+      >
+        <i class="icon-italic"></i>
+      </button>
+      <button type="button" class="btn btn-light" data-original-title="List">
+        <i class="icon-list"></i>
+      </button>
+      <button type="button" class="btn btn-light" data-original-title="Img">
+        <i class="icon-picture"></i>
+      </button>
+      <button type="button" class="btn btn-light" data-original-title="URL">
+        <i class="icon-arrow-right"></i>
+      </button>
+    </div>
+    <div class="btn-group">
+      <button
+        type="button"
+        class="btn btn-light"
+        data-original-title="Align Right"
+      >
+        <i class="icon-align-right"></i>
+      </button>
+      <button
+        type="button"
+        class="btn btn-light"
+        data-original-title="Align Center"
+      >
+        <i class="icon-align-center"></i>
+      </button>
+      <button
+        type="button"
+        class="btn btn-light"
+        data-original-title="Align Left"
+      >
+        <i class="icon-align-left"></i>
+      </button>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-light" data-original-title="Preview">
+        <i class="icon-eye-open"></i>
+      </button>
+      <button type="button" class="btn btn-light" data-original-title="Save">
+        <i class="icon-ok"></i>
+      </button>
+      <button type="button" class="btn btn-light" data-original-title="Cancel">
+        <i class="icon-trash"></i>
+      </button>
+    </div>
+  </div>
   <div
     contenteditable
     @input="handleInput"
@@ -98,6 +156,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+.btn-toolbar {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.text-editor {
+  border: 1px solid #aaa;
+  text-shadow: 1px 1px 5px #494949;
+  height: 400px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 5px;
+  outline: none;
+}
 .text-editor h3 {
   margin: 40px 0 0;
 }
