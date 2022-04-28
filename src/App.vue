@@ -1,5 +1,4 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
   <TextEditor value="test text editor" dir="rtl" align="right" />
 </template>
 
